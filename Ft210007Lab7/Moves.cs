@@ -47,8 +47,8 @@ namespace Ft210007Lab7
                         CanStraightMove();
 
                 case Figure.Bishop:
-                    return (fm.SignX != 0 || fm.SignY != 0) &&
-                         CanStraightMove();
+                    return fm.AbsDeltaX == fm.AbsDeltaY;
+                         //CanStraightMove() && (fm.SignX != 0 || fm.SignY != 0) ???
 
                 case Figure.Knight:
                     return CanKnightMove();
@@ -64,22 +64,24 @@ namespace Ft210007Lab7
                 return false;
             }
 
-            bool CanStraightMove()  
+        bool CanStraightMove()
+        {
+            Square at = (fm.from);
+            do
             {
-                Square at = fm.from;
-                while (at.OnBoard()) {
-                    at = new Square(at.x + fm.SignX, at.y + fm.SignY);
-                    if (at == board.fs[fm.to.x, fm.to.y].square)
-                        return true;
-                } 
-                return false;
-            }
+                at = new Square(at.x + fm.SignX, at.y + fm.SignY);
+                if (at == fm.to)
+                    return true;
+            } while (at.OnBoard() && 
+            board.GetFigureAt(at.x, at.y) == Figure.none);
+            return false;
+        }
 
 
 
         }
 
-        public Square[] FindAllMoves(FigureOnSquare check)
+        public List<Square> FindAllMoves(FigureOnSquare check)
         {
             List<Square> allowedSquares = new List<Square>();
             for (int x = 0; x < 8; x++)
@@ -93,9 +95,8 @@ namespace Ft210007Lab7
                     }
                 }
             }
-            return allowedSquares.ToArray();
+            return allowedSquares;
         }
-
 
     }
 }

@@ -15,6 +15,8 @@ namespace Ft210007Lab7
         Rook = 'R',
         Knight = 'N',
 
-        Target = 'T'
+        Target = 'T',
+
+        Pozition = 'X'
     }
 }
