@@ -1,0 +1,43 @@
+Board initialized
+Moves rules initialized
+User added coordinate x: 2
+User added coordinate y: 3
+User added coordinate x: 6
+User added coordinate y: 6
+Figure R setted on 2;3
+Figure T setted on 6;4
+Array of figures moves formation
+0;3
+1;3
+2;0
+2;1
+2;2
+2;4
+2;5
+2;6
+2;7
+3;3
+4;3
+5;3
+6;3
+7;3
+Figure R setted on 6;4
+Array of figures moves formation
+0;4
+1;4
+2;4
+3;4
+4;4
+5;4
+6;0
+6;1
+6;2
+6;3
+6;5
+6;6
+6;7
+7;4
+Figure T setted on 6;4
+Searching for intersections
+Intersection has been found: 2;4
+Figure X setted on 2;4

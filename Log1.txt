@@ -1,0 +1,9 @@
+Board initialized
+Moves rules initialized
+User added coordinate x: 0
+User added coordinate y: 0
+User added coordinate x: 6
+User added coordinate y: 6
+Figure B setted on 0;0
+Figure T setted on 6;6
+Target can be reached by first move

@@ -1,0 +1,5 @@
+Board initialized
+Moves rules initialized
+User added coordinate x: 49
+User added coordinate y: 20
+User entered wrong coordinates: 49;20
