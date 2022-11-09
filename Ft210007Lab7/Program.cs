@@ -118,6 +118,9 @@ namespace Ft210007Lab7
                     {
                         logger.WriteLine("Intersection has been found: " + secondMove.x + ";" + secondMove.y);
                         Console.WriteLine("Target can be reached by second move from X pozition with coordinates: " + secondMove.x + ";" + secondMove.y);
+                        board.SetFigureAt(secondMove.x, secondMove.y, Figure.Pozition);
+                        logger.WriteLine("Figure " + (char)Figure.Pozition + " setted on " + secondMove.x + ";" + secondMove.y);
+                        Console.WriteLine(BoardToAcsii(board));
                     }
 
 
@@ -126,11 +129,11 @@ namespace Ft210007Lab7
                         Console.WriteLine("Target can't be reached by second move");
                         logger.WriteLine("Intersection hasn't been found");
                     }
-
-                    board.SetFigureAt(secondMove.x, secondMove.y, Figure.Pozition);
-                    logger.WriteLine("Figure " + (char)Figure.Pozition + " setted on " + secondMove.x + ";" + secondMove.y);
-                    Console.WriteLine(BoardToAcsii(board));                  
-            }
+                }
+                else
+                {
+                    logger.WriteLine("Target can be reached by first move");
+                }
                 break;
             }
         

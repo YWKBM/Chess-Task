@@ -48,7 +48,7 @@ namespace Ft210007Lab7
 
                 case Figure.Bishop:
                     return fm.AbsDeltaX == fm.AbsDeltaY;
-                         //CanStraightMove() && (fm.SignX != 0 || fm.SignY != 0) ???
+                //CanStraightMove() && (fm.SignX != 0 || fm.SignY != 0) ???
 
                 case Figure.Knight:
                     return CanKnightMove();
