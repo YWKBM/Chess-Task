@@ -1,0 +1,5 @@
+Board initialized
+Moves rules initialized
+User added coordinate x: 0
+User added coordinate y: 0
+User entered wrong figure name: ]
