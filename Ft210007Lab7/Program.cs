@@ -18,7 +18,7 @@ namespace Ft210007Lab7
                 Board board = new Board();
                 logger.WriteLine("Board initialized");
                 Moves moves = new Moves(board);
-                logger.WriteLine("Board initialized");
+                logger.WriteLine("Moves rules initialized");
 
                 //инициализация координаты фигуры
                 Console.WriteLine("Enter the x pozition of figure [0 : 7]: ");
@@ -129,10 +129,10 @@ namespace Ft210007Lab7
 
                     board.SetFigureAt(secondMove.x, secondMove.y, Figure.Pozition);
                     logger.WriteLine("Figure " + (char)Figure.Pozition + " setted on " + secondMove.x + ";" + secondMove.y);
-                    Console.WriteLine(BoardToAcsii(board));
-                    break;
+                    Console.WriteLine(BoardToAcsii(board));                  
             }
-        }
+                break;
+            }
         
             logger.Close();
             
