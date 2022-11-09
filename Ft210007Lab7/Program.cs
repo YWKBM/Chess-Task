@@ -47,6 +47,7 @@ namespace Ft210007Lab7
                     logger.WriteLine("User entered wrong figure name: " + (char)figure);
                     break;
                 }
+                
 
             //инициализация цели
                 Console.WriteLine("Enter the x pozition of target: ");
@@ -61,6 +62,16 @@ namespace Ft210007Lab7
                     logger.WriteLine("User entered wrong coordinates: " + xT + ";" + yT);
                     break;
                 }
+                if (SquaresSameColor(board.fs[x, y].square, board.fs[xT, yT].square))
+                {
+                    Console.WriteLine("The color of target's and figure's pozition is the same");
+
+                }
+                else 
+                {
+                    Console.WriteLine("The color of target's and figure's pozition is different");
+                }
+
 
                 board.SetFigureAt(x, y, figure);
                 logger.WriteLine("Figure " + (char)figure + " setted on " + x + ";" + y);
@@ -159,6 +170,10 @@ namespace Ft210007Lab7
             text += "  +-----------------+\n";
             text += "    a b c d e f g h\n";
             return text;
+        }
+        public static bool SquaresSameColor(Square f, Square t)
+        {
+            return ((f.x + f.y) % 2 == 0) && ((t.x + t.y) % 2 == 0);
         }
 
         public static char GetFigureFrom(int x, int y, Board board)

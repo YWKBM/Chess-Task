@@ -11,6 +11,7 @@ namespace Ft210007Lab7
         public static Square none = new Square(-1, -1);
         public int x { get; set; }
         public int y { get; set; }
+        
 
         public Square(int x, int y)
         {
